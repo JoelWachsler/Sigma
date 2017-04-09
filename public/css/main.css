@@ -1,0 +1,2666 @@
+/*------------------------------------------------------------------
+[Color codes]
+
+Background:	#ffffff (white)
+Content:	#1e1e1e (light black)
+Header h1:	#9caa3b (green)
+Header h2:	#ee4117 (red)
+Footer:		#b5cede (dark black)
+Text: 		#282d30
+
+Green: #7BC55D;
+
+a (standard):	#2DB6CF (dark blue)
+
+
+[Font weights]
+Light: 300 
+Normal: 400
+Bold: 700
+-------------------------------------------------------------------*/
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	outline: none;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background: #f6f6f6;
+}
+
+body {
+	margin: 0;
+	background: #f6f6f6;
+	color: #282d30;
+	font-family: sans-serif;
+}
+
+input {
+	border: 1px solid #aaaaaa;
+	background-color: #fff;
+	font-size: 14px;
+	padding: 3px;
+	outline: 0;
+}
+
+p {
+	font-family: inherit;
+	font-weight: normal;
+	margin-bottom: 1.25em;
+	text-rendering: optimizeLegibility;
+}
+
+hr {
+	background: #fdfdfd;
+	color: #f2f2f2;
+	width: 100%;
+	height: 10px;
+	margin: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+	overflow: hidden;
+	border: 0;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+}
+
+/* ==========================================================================
+   Navigations
+   ========================================================================== */
+
+nav#topBar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: rgba(255,255,255,0.98);
+	color: #f2f2f2;
+	width: 100%;
+	height: 54px;
+	font-weight: 200;
+	text-transform: uppercase;
+	z-index: 9999;
+}
+
+nav#topBar .leftWrapper {
+	height: 54px;
+	overflow: hidden;
+	border-bottom: 1px solid #222222;
+	width: 218px;
+}
+
+nav#topBar .rightWrapper {
+	height: 54px;
+	border-bottom: 1px solid #dedede;
+}
+
+nav#topBar #nav-logo {
+	width: 100%;
+	height: 55px;
+	overflow: hidden;
+}
+
+nav#topBar #nav-logo a {
+	background: #2DB6CF;
+	color: #ffffff;
+	display: block;
+	padding: 10px 0 20px 0;
+	text-align: center;
+	font-size: 24px;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+nav#topBar #math-search {
+}
+
+nav#topBar #math-search input {
+	background: #ffffff;
+	border: 0;
+	border-right: 0px solid #dedede;
+	width: 300px;
+	margin: 0;
+	font-weight: 400;
+	padding: 17px 20px 25px 47px;
+	background: url('../img/search.png') no-repeat scroll 10px 11px;
+	background-size: 30px 30px;
+}
+
+.ui-autocomplete {
+	position: absolute;
+	top: 66px;
+	left: 30px;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	z-index: 999999;
+	margin: 0;
+	width: 260px;
+	padding: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+nav#topBar #nav-items ul {
+	list-style: none;
+	margin: 0 30px 0 0;
+	padding: 0;
+}
+
+nav#topBar #nav-items ul li {
+	display: inline-block;
+	height: 60px;
+	position: relative;
+}
+
+nav#topBar #nav-items ul li a {
+	display: block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #282d30;
+	text-decoration: none;
+	overflow: hidden;
+	padding: 13px 20px 18px 20px;
+}
+
+nav#topBar #nav-items ul li a span {
+	display: table-cell;
+	height: 25px;
+	vertical-align: middle;
+}
+
+nav#topBar #nav-items ul li a.icon {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+nav#topBar #nav-items ul li ul {
+	display: none;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item #notification #notification-counter {
+	position: absolute;
+	top: 10px;
+	left: 4px;
+	z-index: 999999999;
+	background: #2DB6CF;
+	color: #ffffff;
+	display: block;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul {
+	position: absolute;
+	top: 66px;
+	right: -25px;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	z-index: 999999;
+	margin: 0;
+	width: 260px;
+	padding: 10px 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li {
+	display: block;
+	height: auto;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul h2 {
+	font-weight: 700;
+	margin: 5px 0 10px 0;
+	font-size: 13px;
+	padding: 0 0 3px 0;
+	position: relative;
+	color: #B2B2B2;
+	border-bottom: 1px solid #dedede;
+	text-transform: uppercase;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li a {
+	width: 100%;
+	padding: 5px 0;
+	font-weight: 400;
+	font-size: 12px;
+	display: table;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li a {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li:last-child a {
+	border-bottom: none;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li a:hover {
+	background: #f7f7f7;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li a span.icon {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	opacity: 0.6;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li a span.icon img {
+	width: 30px;
+	height: auto;
+	position: relative;
+	top: 2px;
+}
+
+nav#topBar #nav-items ul li#notification-button-list-item ul li a p.description {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+nav#topBar #nav-items ul li#more-button-list-item ul {
+	position: absolute;
+	top: 66px;
+	right: -10px;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	z-index: 999999;
+	margin: 0;
+	width: 160px;
+	padding: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+nav#topBar #nav-items ul li#more-button-list-item ul li {
+	display: block;
+	height: auto;
+}
+
+nav#topBar #nav-items ul li#more-button-list-item ul li a {
+	width: auto;
+	padding: 5px 10px;
+	font-weight: 400;
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+nav#topBar #nav-items ul li#more-button-list-item ul li a:hover {
+	background: #f7f7f7;
+}
+
+nav#topBar #nav-items ul li a.icon#notification {
+	padding: 0;
+	width: 40px;
+	height: 55px;
+	background-image: url('../img/notification.png');
+	background-repeat: no-repeat;
+    background-position: center center;
+	background-size: 22px 22px;
+	cursor: pointer;
+}
+
+nav#topBar #nav-items ul li a.icon#settings {
+	padding: 0;
+	width: 40px;
+	height: 55px;
+	background-image: url('../img/settings.png');
+	background-repeat: no-repeat;
+    background-position: center center;
+	background-size: 25px 25px;
+}
+
+nav#topBar #nav-items ul li a.icon#more {
+	padding: 0;
+	width: 30px;
+	height: 55px;
+	background-image: url('../img/more.png');
+	background-repeat: no-repeat;
+    background-position: center center;
+	background-size: 22px 22px;
+}
+
+nav#topBar #nav-items ul li a.icon:hover {
+	opacity: 1;
+}
+
+nav#subBar {
+	/*background: rgba(253,253,253,0.98);*/
+	color: #f2f2f2;
+	display: block;
+	width: 95%;
+	height: 57px !important;
+	margin: auto;
+	font-weight: 400;
+	text-transform: uppercase;
+	overflow: hidden;
+	border-bottom: 1px solid #dedede;
+}
+
+nav#subBar h2 {
+	color: #282d30;
+	font-size: 20px;
+	font-weight: 300;
+	margin: 15px 0;
+	float: left;
+}
+
+nav#subBar ul {
+	margin: 9px 0 0 0;
+	padding: 0;
+	text-align: center;
+	height: 40px;
+	float: right;
+    max-width: 87%;
+}
+
+nav#subBar ul li {
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 4px;
+}
+
+nav#subBar ul li a {
+	display: block;
+	color: #222222;
+	padding: 11px 10px 16px 10px;
+	text-decoration: none;
+	overflow: hidden;
+	border-bottom: 3px solid #f6f6f6;
+	font-size: 13px;
+}
+
+nav#subBar ul li a:hover {
+	border-bottom: 3px solid #2DB6CF;
+}
+
+nav#subBar ul li a.active {
+	border-bottom: 3px solid #2DB6CF;
+}
+
+nav#subBar ul li #create-class {
+	display: block;
+	color: #ffffff;
+	padding: 0 7px;
+	margin: 6px 7px 16px 7px;
+	text-decoration: none;
+	overflow: hidden;
+	border-bottom: 3px solid rgba(0,0,0,0);
+	font-size: 13px;
+	cursor:pointer;
+	background: #2DB6CF;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+}
+
+nav#subBar ul li #create-class:hover {
+	background: #444444;
+}
+
+#side-nav-wrapper {
+	position: relative;
+	float: left;
+	width: 218px;
+}
+
+aside#sideNav {
+	position: fixed;
+	top: 55px;
+	left: 0px;
+	background: #282d30;
+	display: block;
+	width: 218px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-weight: 700;
+}
+
+aside#sideNav #profile-info {
+	margin: 20px 0 0 0;
+	color: #f2f2f2;
+	font-weight: 400;
+	text-align: center;
+}
+
+aside#sideNav #profile-info #profile-picture {
+	background: #464E52;
+	position: relative;
+	display: block;
+	width: 60px;
+	height: 60px;
+	overflow: hidden;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: auto;
+}
+
+aside#sideNav #profile-info #profile-picture:hover {
+	cursor: pointer;
+}
+
+aside#sideNav #profile-info #profile-picture:hover span#change {
+	display: block;
+}
+
+aside#sideNav #profile-info #profile-picture span#change {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(40, 45, 48, 0.6);
+	padding: 1.9em 0;
+	text-align: center;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+aside#sideNav #profile-info #profile-picture img {
+	width: 100%;
+	height: auto;
+}
+
+aside#sideNav #profile-info #profile-info-wrapper .course-progress {
+
+}
+
+aside#sideNav #profile-info #profile-info-wrapper .course-progress .course-progressbar-container {
+	position: relative;
+	display: block;
+	background: #464E52;
+	border: 0px solid #dedede;
+	width: 80%;
+	height: 20px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	overflow: hidden;
+	margin: auto;
+}
+
+aside#sideNav #profile-info #profile-info-wrapper .course-progress .course-progressbar-container .course-progressbar-progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #2DB6CF;
+}
+
+aside#sideNav #profile-info #profile-info-wrapper .course-progress .course-progressbar-container span {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8em;
+	position: relative;
+	z-index: 999999;
+}
+
+
+aside#sideNav #profile-info #profile-name {
+	display: block;
+	margin: 5px 0;
+	font-size: 0.75em;
+	text-decoration: none;
+	color: #f2f2f2;
+	font-weight: 700;
+}
+
+aside#sideNav #profile-info #profile-name:hover {
+	text-decoration: underline;
+}
+
+aside#sideNav #profile-info #profile-stats {
+	margin: 0;
+	font-size: 0.7em;
+	font-weight: 700;
+	display: block;
+	margin-bottom: 4px;
+}
+
+
+aside#sideNav header h3 {
+	text-align: center;
+	color: #4e5857;
+	font-weight: normal;
+}
+
+aside#sideNav input#search-dictionary {
+	background: #ffffff;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-top: 2px solid #dedede;
+	border-bottom: 2px solid #dedede;
+}
+
+aside#sideNav ul {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	overflow-y: auto;
+	margin-top: 20px;
+}
+
+aside#sideNav ul li select {
+	display: block;
+	margin: 15px auto 20px auto;
+	background: none;
+	outline: 0;
+	color: #dedede;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 0 !important;   /*Removes border*/
+    -moz-appearance: none;  /*Removes default style Firefox*/
+    -webkit-appearance:none;
+    background: url('../img/arrow-down.png')  no-repeat;
+    background-position: 95px 0px;
+	background-size: 16px 16px;
+    width: 118px;
+    text-indent: 0.01px;
+ 	text-overflow: "";
+}
+
+aside#sideNav ul li {
+	display: block;
+}
+
+aside#sideNav ul li#small-screen-profile a {
+	display: none;
+}
+
+aside#sideNav ul li a {
+	display: block;
+	color: #cccccc;
+	padding: 15px 20px 15px 20px;
+	text-decoration: none;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	-webkit-transition: background 0.1s linear;
+	-moz-transition: background 0.1s linear;
+	-o-transition: background 0.1s linear;
+	transition: background 0.1s linear;
+}
+
+aside#sideNav ul li a.active {
+	background: #22272b;
+	color: #dedede;
+}
+
+aside#sideNav ul li a:hover {
+	background: #22272b;
+	color: #dedede;
+}
+
+aside#sideNav p {
+	display: block;
+	color: #687170;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 0.6em;
+	text-align: center;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+section {
+	background: #f6f6f6;
+}
+
+section, article, aside {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	cursor: default;
+}
+
+section[role=main] {
+	display: block;
+	width: 100%;
+	padding: 0 0 30px 0;
+	margin: 55px auto 0 auto;
+	overflow: hidden;
+	background-size: 256px 256px !important;
+	background-repeat: no-repeat !important;
+	background-position: right bottom !important;
+}
+
+section[role=main] input[type="text"], section[role=main] input[type="password"], section[role=main] input[type="number"]{
+	padding: 7px 10px 8px 10px;
+	font-size: 12px;
+	color: #555;
+	border: 1px solid #aaa;
+	background-color: #fff;
+}
+
+section[role=main] header[role="banner"] {
+	background: #f2f2f2;
+	color: #282d30;
+	overflow: hidden;
+	padding: 10px 20px;
+	display: none;
+}
+
+section[role=main] header[role="banner"] select {
+	border: 0;
+	background: #f2f2f2;
+	outline: 0;
+	color: #282d30;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 700;
+}
+
+section[role=main] header[role="banner"] h3 {
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 700;
+	margin: 3.5px 0;
+	padding: 0 10px;
+}
+
+/* ==========================================================================
+   Browser tasks
+   ========================================================================== */
+
+article#taskBrowser {
+	display: block;
+	width: 80%;
+	margin: 15px auto 0 auto;
+}
+
+article#taskBrowser .subchap {
+	display: block;
+	width: 100%;
+	background: none;
+	padding: 20px 0;
+	margin: 0 auto 15px auto;
+	border: 0px solid #dedede;
+}
+
+article#taskBrowser header[role=title] {
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 1em
+}
+
+article#taskBrowser .task-scroll {
+	width: 100%; 
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	padding: 10px 0;
+	color: #000000;
+}
+
+article#taskBrowser .task-scroll .task-item {
+	display: table;
+	margin: 0 5px;
+}
+
+article#taskBrowser .task-scroll .task-item a {
+	width: 100%;
+	background: #ffffff;
+	color: #8F8F8F;
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	text-align: center;
+	height: 130px;
+	padding: 0 10px 10px 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0.9;
+}
+
+article#taskBrowser .task-scroll .task-item a.hover {
+	color: #22272b;
+	opacity: 1;
+}
+
+article#taskBrowser .task-scroll .task-item a.walkthrough {
+	background: #2DB6CF;
+	border: 1px solid #598795;
+	color: #ffffff;
+}
+
+article#taskBrowser .task-scroll .task-item .difficulty {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	display: block;
+}
+
+.circle {
+	display: inline-block;
+	border: 1px solid #22272b;
+	width: 10px;
+	height: 10px;
+	margin-right: 3px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.circle.filled {
+	background: #22272b;
+}
+
+.star {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	background: url('../img/star.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.star.filled, .star:hover {
+	background: url('../img/star-filled.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center center;
+}
+
+
+/* ==========================================================================
+   Manager
+   ========================================================================== */
+
+article[role=manager] {
+	display: block;
+	width: 90%;
+	margin: 30px auto 0 auto;
+}
+
+article[role=manager] h2 {
+	margin: 0 0 0 0;
+}
+
+article[role=manager] #manager-banner {
+	display: block;
+	width: 95%;
+	margin: auto;
+}
+
+/*
+	display: block;
+	width: 80%;
+	margin: 30px auto 0 auto;
+	background: #ffffff;
+	border: 1px solid #dedede;
+*/
+
+article[role=manager] #task-picker {
+	display: block;
+	float: left;
+	vertical-align: middle;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #666;
+	font-weight: bold;
+}
+
+article[role=manager] #task-picker select {
+	display: none;
+	background: 0;
+	border: 0;
+	color: #666;
+	width: 140px;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+article[role=manager] #manager-buttons {
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+}
+
+article[role=manager] #manager-buttons button {
+	display: inline-block;
+	margin: 0;
+}
+
+article[role=manager] #manager-view {
+	display: block;
+	width: 95%;
+	margin: 30px auto 0 auto;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+article[role=manager] #task-settings {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+
+article[role=manager] #task-settings input {
+	border: 0;
+	border-bottom: 1px solid #dedede;
+}
+
+article[role=manager] #add-content {
+	display: block;
+	width: 170px;
+	float: left;
+	padding: 15px 0 0 0;
+}
+
+article[role=manager] #add-content p {
+	margin: 0.4em 0;
+}
+
+article[role=manager] #add-content p label {
+	font-size: 0.9em;
+}
+
+article[role=manager] #add-content input {
+	width: 50px;
+}
+
+article[role=manager] #add-content #add-content-wrapper {
+	margin-bottom: 10px;
+}
+
+article[role=manager] #add-content h4 {
+	margin: 0 0 5px 0;
+}
+
+article[role=manager] #add-content .add-content-item {
+	display: block;
+	width: 100%;
+	padding: 5px 0 5px 40px;
+	border: 1px solid #dedede;
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	margin-bottom: 4px;
+}
+
+article[role=manager] #add-content .add-content-item:hover {
+	background-color: #ededed;
+}
+
+article[role=manager] #add-img {
+	background: url('../img/picture.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center left 10px;
+}
+
+article[role=manager] #add-text {
+	background: url('../img/text.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center left 10px;
+}
+
+article[role=manager] #add-table {
+	background: url('../img/table.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center left 10px;
+}
+
+article[role=manager] .align-content-item {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	border: 1px solid #dedede;
+	cursor: pointer;
+}
+
+article[role=manager] .align-content-item:hover {
+	background-color: #ededed;
+}
+
+article[role=manager] .align-content-item.active {
+	background-color: #ededed;
+}
+
+article[role=manager] #left-align-text {
+	background-image: url('../img/left-align.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center center;
+}
+
+article[role=manager] #center-align-text {
+	background-image: url('../img/center-align.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center center;
+}
+
+article[role=manager] #right-align-text {
+	background-image: url('../img/right-align.png');
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center center;
+}
+
+article[role=manager] #content {
+	background: #f7f7f7;
+	display: block;
+	margin: 20px auto;
+	border: 1px solid #dedede !important;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-size: 1.2em;
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
+
+.custom-menu {
+    z-index:1000;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+article[role=manager] #manager-solution-answer {
+	display: block;
+	width: 95%;
+	margin: 30px auto 0 auto;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+article[role=manager] #manager-solution-answer #content_solver {
+	float: left;
+	width: 50%;
+}
+
+article[role=manager] #manager-solution-answer #answer_content {
+	float: left;
+	width: 50%;
+}
+
+/* ==========================================================================
+   Task
+   ========================================================================== */
+
+section[role=main] article[role=task] {
+	position: relative;
+	display: block;
+	background: #ffffff;
+	width: 80%;
+	max-width: 850px;
+	border: 1px solid #dedede;
+	margin: 30px auto 0 auto;
+	padding: 0 0 25px 0;
+}
+
+section[role=main] article[role=task] header {
+	display: block;
+	border-bottom: 1px solid #dedede;
+	overflow: hidden;
+	height: 62px;
+}
+
+section[role=main] article[role=task] header a {
+	display: block;
+	color: #282d30;
+	text-decoration: none;
+	font-size: 0.9em;
+	display: table-cell; 
+	vertical-align: middle;
+	width: 150px;
+	height: 62px;
+	text-align: center;
+}
+
+section[role=main] article[role=task] header a span {
+	vertical-align: middle;
+	display: table-cell;
+	width: 150px;
+	height: 62px;
+}
+
+section[role=main] article[role=task] header a:hover {
+	background: #f2f2f2;
+}
+
+section[role=main] article[role=task] header .task-move {
+	display: block;
+	width: 150px;
+	height: 62px;
+}
+
+section[role=main] article[role=task] header .task-move#next {
+	float: right;
+}
+
+section[role=main] article[role=task] header .task-move#prev {
+	float: left;
+}
+
+section[role=main] article[role=task] header a#exercise-previous {
+	border-right: 1px solid #dedede;
+	float: left;
+}
+
+section[role=main] article[role=task] header span#exercise-this {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+	color: #282d30;
+}
+
+.exercise-circle-wrapper {
+	position: absolute;
+	top: 75px;
+	right: -10px;
+	display: block;
+	width: 75px;
+}
+
+section[role=main] article[role=task] header a#exercise-next {
+	border-left: 1px solid #dedede;
+	float: right;
+}
+
+section[role=main] article[role=task] #exercise-content {
+    display: block;
+    margin: 20px auto;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position:relative;
+    width: 500px;
+}
+
+.container-task-title {
+	font-weight: normal;
+	margin: 0;
+	font-size: 22px;
+	text-align: center;
+}
+
+section[role=main] article[role=task] #exercise-content table, article[role=manager] #content table {
+	/*margin: 10px auto;*/
+	padding: 0;
+	list-style: none;
+	text-align: left;
+	border-collapse: collapse;
+	border-color: #dedede;
+}
+
+section[role=main] article[role=task] #exercise-content table tr td, article[role=manager] #content table tr td {
+	padding: 0px 15px;
+	border-color: inherit;
+}
+
+section[role=main] article[role=task] #exercise-content table tr:nth-child(1) td, article[role=manager] #content table tr:nth-child(1) {
+	font-weight: 400;
+}
+
+section[role=main] article[role=task] #exercise-content #exercise-input {
+	text-align: center;
+	margin: 40px 0 0 0;
+}
+
+section[role=main] article[role=task] #exercise-input p {
+	text-align: center;
+}
+
+section[role=main] article[role=task] #exercise-input input {
+	border: 0;
+	border-bottom: 1px solid #dedede;
+	width: 100px;
+	margin: 0 15px 0 10px;
+}
+
+section[role=main] article[role=task] #exercise-input input:last-child {
+	margin-right: 0px
+}
+
+section[role=main] article[role=task] #exercise-input #check-exercise {
+	display: block;
+	margin: 30px auto 10px auto;
+}
+
+#task-feedback {
+	background-size: 45px 45px !important;
+	background-repeat: no-repeat !important;
+	background-position: 40px center !important;
+	background: #2DB6CF;
+	color: #ffffff;
+	position: fixed;
+	width: 83%;
+	height: 80px;
+	bottom: -80px;
+	left: 17%;
+}
+
+#task-feedback h1 {
+	font-size: 1.6em;
+	text-align: center;
+	margin: 0.8em 0 1em 0;
+}
+
+#task-feedback h1 a {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 4px solid #ffffff;
+}
+
+/* ==========================================================================
+   Walkthrough
+   ========================================================================== */
+
+section[role=main] article[role=walkthrough] {
+	display: block;
+	background: #ffffff;
+	width: 80%;
+	max-width: 850px;
+	border: 1px solid #dedede;
+	margin: 30px auto 0 auto;
+	padding: 0 0 25px 0;
+}
+
+section[role=main] article[role=walkthrough] header {
+	display: block;
+	border-bottom: 1px solid #dedede;
+	overflow: hidden;
+	height: 62px;
+}
+
+section[role=main] article[role=walkthrough] header a {
+	display: block;
+	color: #282d30;
+	text-decoration: none;
+	font-size: 0.9em;
+	display: table-cell; 
+	vertical-align: middle;
+	width: 150px;
+	height: 62px;
+	text-align: center;
+}
+
+section[role=main] article[role=walkthrough] header a span {
+	vertical-align: middle;
+	display: table-cell;
+	width: 150px;
+	height: 62px;
+}
+
+section[role=main] article[role=walkthrough] header a:hover {
+	background: #f2f2f2;
+}
+
+section[role=main] article[role=walkthrough] header .task-move {
+	display: block;
+	width: 150px;
+	height: 62px;
+}
+
+section[role=main] article[role=walkthrough] header .task-move#next {
+	float: right;
+}
+
+section[role=main] article[role=walkthrough] header .task-move#prev {
+	float: left;
+}
+
+section[role=main] article[role=walkthrough] header a#exercise-previous {
+	border-right: 1px solid #dedede;
+	float: left;
+}
+
+section[role=main] article[role=walkthrough] header span#exercise-this {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 20px 0;
+	color: #282d30;
+}
+
+section[role=main] article[role=walkthrough] header a#exercise-next {
+	border-left: 1px solid #dedede;
+	float: right;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content {
+    display: block;
+    margin: 20px auto;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position:relative;
+    width: 800px;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content img {
+	display: block;
+	width: 300px;
+	height: auto;
+	margin: auto;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content .img-text {
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 3em;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content h2 {
+	font-weight: 700;
+	margin: 0em 0 0.6em 0;
+	font-size: 22px;
+	text-align: left;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content table, article[role=manager] #content table {
+	/*margin: 10px auto;*/
+	padding: 0;
+	list-style: none;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content table tr th {
+	text-align: center;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content table tr td, article[role=manager] #content table tr td {
+	padding: 0px 15px;
+}
+
+section[role=main] article[role=walkthrough] #walkthrough-content table tr:nth-child(1) td, article[role=manager] #content table tr:nth-child(1) {
+	font-weight: 400;
+}
+
+/* ==========================================================================
+   Solution
+   ========================================================================== */
+
+section[role=main] article[role=solution] {
+	display: block;
+	background: #ffffff;
+	width: 80%;
+	border: 1px solid #dedede;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+}
+
+section[role=main] article[role=solution] table {
+	margin: 0;
+	width: 100%;
+	padding: 10px 40px 0px 40px;
+}
+
+section[role=main] article[role=solution] table tr {
+	min-height: 65px;
+}
+
+section[role=main] article[role=solution] table tr td:nth-child(1) {
+	width: 75px;
+}
+
+section[role=main] article[role=solution] table tr td:nth-child(2) {
+	width: 300px;
+}
+
+/* ==========================================================================
+   Statistics
+   ========================================================================== */
+
+section[role=main] article[role=statistics] {
+	display: block;
+	width: 90%;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+}
+
+section[role=main] article[role=statistics] #taskFrequency {
+	background: #ffffff;
+	border: 1px solid #dedede;
+	margin: 0 auto 60px auto;
+	width: 100%;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=statistics] #taskFrequency #graph-wrapper {
+	display: block;
+	width: 85%;
+	float: left;
+}
+
+section[role=main] article[role=statistics] #taskFrequency #tfGraph{
+
+}
+
+section[role=main] article[role=statistics] #taskFrequency #graph-description {
+	display: block;
+	width: 350px;
+	float: right;
+	padding: 0 20px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=statistics] #taskFrequency #graph-description p {
+	display: inline-block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0 0 0 15px;
+	color: #666;
+}
+
+section[role=main] article[role=statistics] #taskFrequency #graph-description .graph-color {
+	display: inline-block;
+	width: 13px;
+	height: 7px;
+	margin-bottom: 1px;
+	margin-right: 5px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+section[role=main] article[role=statistics] #taskFrequency #graph-settings {
+	display: block;
+	width: 15%;
+	float: right;
+	padding: 20px 20px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=statistics] #taskFrequency #graph-settings p {
+	display: inline-block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 4px 0 8px 0;
+	color: #666;
+}
+
+section[role=main] article[role=statistics] h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 18px;
+	float: left;
+}
+
+section[role=main] article[role=statistics] #taskFrequency canvas {
+	margin: 15px 0 0 0;
+}
+
+section[role=main] article[role=statistics] #level-statistics {
+	background: #ffffff;
+	border: 1px solid #dedede;
+	margin: 0 auto 60px auto;
+	width: 95%;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=statistics] #level-statistics #level-info {
+	text-align: center;
+	padding: 10px 0;
+}
+
+section[role=main] article[role=statistics] #level-statistics #level-info .level-info-box {
+	display: inline-block;
+	width: 200px;
+	padding: 10px 10px 10px 10px;
+	margin: 0 5px;
+	color: #666666;
+}
+
+section[role=main] article[role=statistics] #level-statistics #level-info .level-info-box #level-info-value {
+	font-size: 4em;
+	font-weight: 300;
+	margin: 0 0;
+}
+
+section[role=main] article[role=statistics] #level-statistics #level-info .level-info-box #level-info-text {
+	font-size: 0.8em;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0 0;
+}
+
+section[role=main] article[role=statistics] #level-statistics h4, section[role=main] article[role=statistics] .courseStat h4 {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+section[role=main] article[role=statistics] .courseStat {
+	width: 95%;
+	display: block;
+	margin: 0 auto 60px auto;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	padding: 15px 20px 25px 20px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	text-align: center;
+}
+
+section[role=main] article[role=statistics] .courseStat h2 {
+	font-weight: 400;
+	font-size: 16px;
+	text-transform: uppercase;
+	padding: 6px 0 10px 0;
+	margin: 0;
+}
+
+section[role=main] article[role=statistics] .courseStat .stat-circle {
+	display: inline-block;
+	padding: 0 30px;
+}
+
+section[role=main] article[role=statistics] .courseStat .stat-circle p {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #666666;
+}
+
+section[role=main] article[role=statistics] .courseStat .stat-circle input {
+}
+
+/* ==========================================================================
+   Achievements
+   ========================================================================== */
+
+section[role=main] article[role=achievements] {
+	display: block;
+	width: 90%;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+}
+
+section[role=main] article[role=achievements] #grid {
+	background: #ffffff;
+	border: 1px solid #dedede;
+	margin: 0 auto 60px auto;
+	width: 95%;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=achievements] #grid .achievement {
+	display: block;
+	float: left;
+	width: 25%;
+	height: 150px;
+	text-align: center;
+	margin-bottom: 30px;
+	opacity: 0.3;
+	text-transform: uppercase;
+}
+
+section[role=main] article[role=achievements] #grid .achievement.achieved {
+	opacity: 1;
+}
+
+section[role=main] article[role=achievements] #grid .achievement .achievement-image-container {
+	display: block;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+section[role=main] article[role=achievements] #grid .achievement .achievement-image-container img {
+	display: block;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+section[role=main] article[role=achievements] #grid .achievement .achievement-name {
+	font-size: 1em;
+	margin: 0.3em 0 0.4em 0;
+}
+
+section[role=main] article[role=achievements] #grid .achievement .achievement-task {
+	font-size: 0.7em;
+	font-weight: 700;
+	margin: 0;
+}
+
+/* ==========================================================================
+   Achievements
+   ========================================================================== */
+
+section[role=main] article[role=classroom] {
+	display: block;
+	width: 90%;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+}
+
+section[role=main] article[role=classroom] h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+section[role=main] article[role=classroom] input[type="text"]{
+	padding: 7px 10px 8px 10px;
+	font-size: 12px;
+	color: #555;
+	border: 1px solid #aaa;
+	background-color: #fff;
+}
+
+section[role=main] article[role=classroom] #no-classroom {
+	display: block;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	margin: 0 auto 60px auto;
+	width: 60%;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	text-align: center;
+}
+
+section[role=main] article[role=classroom] #no-classroom button{
+	margin-left: 10px;
+}
+
+section[role=main] article[role=classroom] #no-classroom h4 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+section[role=main] article[role=classroom] #my-classroom {
+
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info p {
+	display: block;
+	font-size: 14px;
+	margin: 0 0 0 2px;
+	font-weight: 400;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info ul {
+	margin: 0 0 0 2px;
+	padding: 0;
+	font-size: 14px;
+	list-style: none;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info ul li a {
+	color: #222222;
+	text-decoration: none;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info ul li a:hover {
+	text-decoration: underline;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info h5 {
+	font-weight: 700;
+	margin: 20px 0 10px 0;
+	font-size: 13px;
+	padding: 0 0 3px 0;
+	position: relative;
+	color: #B2B2B2;
+	border-bottom: 1px solid #dedede;
+	text-transform: uppercase;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info #classroom-info-content {
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info #classroom-info-content #teacher-image img {
+	width: 100%;
+	height: 100%;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-info {
+	float: right;
+	width: 25%;
+	margin: 0 auto 40px auto;
+	padding: 0 25px 25px 25px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #dedede;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed {
+	float: left;
+	display: block;
+	width: 70%;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item {
+	background: #ffffff;
+	margin: 0 0 80px 0;
+	width: 100%;
+	padding: 0;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;
+	border: 1px solid #dedede;
+	position: relative;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item.finished {
+	opacity: 0.5;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content {
+	padding: 25px 25px;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content.create-homework h4 {
+	display: block;
+	font-size: 22px;
+	margin: 0 0;
+	font-weight: 300;
+	padding: 0;
+	text-transform: none;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content.create-homework label {
+	display: block;
+	font-size: 14px;
+	margin: 0;
+	font-weight: 400;
+	margin-bottom: 0.4em;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content.create-homework textarea, section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content.create-homework input {
+	resize: none;
+	font-size: 0.8em;
+	line-height: 1.2em;
+	border: 1px solid #dedede;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content.create-homework textarea {
+	width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .item-content.create-homework button {
+	margin-top: 0;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .type {
+	display: block;
+	font-size: 22px;
+	margin: 0 0;
+	font-weight: 300;
+	padding: 0;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .date {
+	display: block;
+	font-size: 14px;
+	margin: 0;
+	font-weight: 400;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .message {
+	display: block;
+	font-size: 1em;
+	margin: 0.6em 0 0 0;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .deadline {
+	display: block;
+	font-size: 14px;
+	margin: 0 0 0 0;
+	float: right;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .deadline .deadline-value {
+	display: block;
+	text-align: center;
+	font-size: 42px;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .deadline .deadline-text {
+	display: block;
+	text-align: center;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks-title {
+	display: block;
+	font-size: 1em;
+	margin: 1em 0 0 0;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks {
+	width: 100%;
+	margin: 0;
+	padding: 1em 0 1.2em 0;
+	border-top: 1px solid #dedede;
+	text-align: center;
+	background: #fbfbfb;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks a {
+	display: inline-block;
+	width: 12.5%;
+	padding: 6px 6px;
+	text-align: center;
+	font-size: 0.9em;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;  
+	color: #666;
+	text-decoration: none;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks a.complete {
+	color: #2DB6CF;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks a:hover {
+	color: #2DB6CF;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks a img {
+	width: 10px;
+	height: auto;
+	display: inline-block;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks #add-tasks {
+	display: inline-block;
+	color: #ffffff;
+	padding: 0px 7px;
+	margin: 0 4px;
+	text-decoration: none;
+	overflow: hidden;
+	border-bottom: 3px solid rgba(0,0,0,0);
+	font-size: 13px;
+	cursor:pointer;
+	background: #2DB6CF;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: 21px;
+	position: relative;
+	top: 5px;
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+}
+
+section[role=main] article[role=classroom] #my-classroom #classroom-feed .item .tasks #add-tasks:hover {
+	background: #444444;
+}
+
+.remodal#addtasksmenu #four {
+	width:100%;
+	overflow:hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.remodal#addtasksmenu #four li {
+	line-height:1.5em;
+	float:left;
+	display:inline;
+	width: 25%;
+}
+
+.remodal#addtasksmenu #four li span {
+	cursor: pointer;
+}
+
+.remodal#addtasksmenu #four li span:hover {
+	text-decoration: underline;
+}
+
+.remodal#addstudent input {
+	display: inline-block;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	margin-right: 20px;
+	padding: 8px 10px;
+	width: 230px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Homework Statistics
+   ========================================================================== */
+
+article[role=homeworkstat] {
+	display: block;
+	width: 90%;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+}
+
+article[role=homeworkstat] h4 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+article[role=homeworkstat] #class-stat-table {
+	display: block;
+	width: 100%;
+	background: #ffffff;
+	border: 1px solid #dedede;
+}
+
+article[role=homeworkstat] #class-stat-table table {
+font-family: sans-serif;
+-webkit-font-smoothing: antialiased;
+font-size: 14px;
+overflow: auto;
+display: block;
+width: auto;
+padding: 10px;
+}
+article[role=homeworkstat] #class-stat-table table th {
+background-color: #2DB6CF;
+font-weight: normal;
+color: white;
+padding: 10px 10px;
+text-align: center;
+}
+article[role=homeworkstat] #class-stat-table table td {
+background-color: #f6f6f6;
+padding: 10px 10px;
+color: rgb(111, 111, 111);
+}
+
+article[role=homeworkstat] #class-stat-pie {
+	display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   Achievements
+   ========================================================================== */
+
+section[role=main] article#courses {
+	display: block;
+	width: 90%;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+	border-radius: 2px 2px 2px 2px;
+}
+
+section[role=main] article#courses .course-item {
+	position: relative;
+	display: block;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	margin: 0 auto 60px auto;
+	width: 95%;
+	padding: 25px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	color: #222222;
+	text-decoration: none;
+}
+
+section[role=main] article#courses .course-item-wrapper {
+	position: relative;
+}
+
+section[role=main] article#courses .course-item.coming-soon {
+	opacity: 0.5;
+}
+
+section[role=main] article#courses .course-item .course-info {
+	float: left;
+	width: 30%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	padding-right: 25px;
+}
+
+section[role=main] article#courses .course-item .course-info h3#course-title {
+	font-weight: 300;
+	margin: 0;
+	font-size: 22px;
+}
+
+section[role=main] article#courses .course-item .course-info p#course-description {
+	font-weight: 400;
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	color: #666666;
+}
+
+section[role=main] article#courses .course-item .course-progress {
+	float: left;
+	width: 70%;
+	text-align: center;
+}
+
+section[role=main] article#courses .course-item .course-progress .stat-circle {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+section[role=main] article#courses .course-item .course-progress .stat-circle p {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 0 0 1em 0;
+}
+
+section[role=main] article#courses .course-item .course-goto {
+	float: right;
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: #f2f2f2;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	font-size: 3.5em;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	line-height: 0.9;
+	text-align: center;
+}
+
+
+/* ==========================================================================
+   Settings
+   ========================================================================== */
+
+section[role=main] article[role=settings] {
+	display: block;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+	width: 640px;
+}
+
+section[role=main] article[role=settings] #account-information {
+	display: block;
+	margin: auto;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	padding: 25px;
+}
+
+section[role=main] article[role=settings] #account-information p {
+	margin: 5px 0;
+	text-align: right;
+}
+
+section[role=main] article[role=settings] #account-information #change-password {
+	margin: 15px 0 0 0;
+}
+
+section[role=main] article[role=settings] #account-information label {
+	display: inline-block;
+	width: 175px;
+	text-align: right;
+	margin-right: 10px;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	color: #666666;
+	font-weight: 700;
+}
+
+section[role=main] article[role=settings] #account-information input {
+	display: inline-block;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	padding: 5px 3px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+section[role=main] article[role=settings] #account-information #button-update-account-settings {
+	float: right;
+	width: 162px;
+}
+
+/* ==========================================================================
+   Settings
+   ========================================================================== */
+
+section[role=main] article[role=tools] {
+	display: block;
+	margin: 30px auto 0 auto;
+	padding: 0 0 20px 0;
+}
+
+section[role=main] article[role=tools] .button {
+	display: block;
+	margin: 10px 0;
+}
+
+#settings-profile-picture-wrapper {
+	display: block;
+	width: 36%;
+	float: left;
+	text-align: center;
+}
+
+#settings-profile-picture {
+	display: block;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin: 0 auto 10px auto;
+}
+
+#imageFile {
+	display: none !important;
+}
+
+#settings-profile-picture img {
+	width: 100%;
+	height: auto;
+}
+
+#settings-account-info-wrapper {
+	display: block;
+	float: right;
+	width: 64%;
+}
+
+
+/* ==========================================================================
+   Classes
+   ========================================================================== */
+
+.no-task {
+	display: none !important;
+}
+
+.sidebar-active {
+	background: #2DB6CF;
+	color: #ffffff !important;
+}
+
+.no-height {
+	display: block;
+	height: 0px;
+	position: relative;
+}
+
+.button {
+	border: 0 none;
+	border-radius: 2px 2px 2px 2px;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-family: Arial,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 20px;
+	margin-bottom: 0;
+	margin-top: 10px;
+	padding: 7px 10px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+	-moz-transition: all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+	text-align: center; /* DELETE WHEN WIDTH AUTO */
+	font-weight: 700 !important;
+	text-decoration: none;
+}
+
+.blue {
+    background: none repeat scroll 0 0 #2DB6CF;
+    color: #ffffff;
+}
+
+.blue:hover {
+	background: none repeat scroll 0 0 #444444;
+	color: #ffffff;
+}
+
+.dark {
+    background: none repeat scroll 0 0 #444444;
+    color: #ffffff;
+}
+
+.dark:hover {
+	background: none repeat scroll 0 0 #2DB6CF;
+	color: #ffffff;
+}
+
+.red {
+    background: none repeat scroll 0 0 #FF8673;
+    color: #ffffff;
+}
+
+.red:hover {
+	background: none repeat scroll 0 0 #444444;
+	color: #ffffff;
+}
+
+.center-content {
+	text-align: center;
+}
+
+.wrapper {
+	display: block;
+	margin: auto;
+}
+
+.wrapper-small {
+	display: block;
+	margin: auto;
+}
+
+.wrapper-compact {
+	margin: auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.topnav-active {
+	background: rgba(24,25,25,0.7);
+}
+
+.tab {
+	display: inline-block;
+	width: 30px;
+}
+
+.tooltip {
+	cursor: help;
+	color: #222222;
+}
+
+.eq-content {
+	display: none;
+}
+
+.prompt {
+	background: #2f3237;
+	color: #ffffff;
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	width: 400px;
+	margin-left: -200px; 
+	z-index: 99999;
+	font-size: 18px;
+	padding: 20px;
+	border: 1px solid #000000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor: default;
+}
+
+.submenu {
+	display: none;
+	position: absolute;
+	top: 60px;
+	background: rgba(24,25,25,0.95);
+	padding: 15px 15px;
+}
+
+.submenu ul {
+	display: block;
+	height: auto !important;
+	width: auto !important;
+}
+
+.submenu ul li {
+	display: block !important;
+	width: auto !important;
+}
+
+.submenu ul li a {
+	display: block;
+	padding: 5px 0;
+	width: 150px;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.submenu ul li a:hover {
+	text-decoration: underline;
+}
+
+.leftWrapper {
+	float: left;
+	width: 17%;
+}
+
+.rightWrapper {
+	margin-left: 218px;
+	position: relative;
+}
+
+.rightSmallerWrapper {
+	display: block;
+	margin: auto;
+	width: 95%;
+}
+
+.part {
+	display: block;
+	margin: auto;
+	background: #ffffff;
+	border: 1px solid #dedede;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	padding: 10px 15px;
+}
+
+.tab {
+	width: 30px;
+}
+
+/* ==========================================================================
+   jQuery UI
+   ========================================================================== */
+
+.ui-tooltip {
+ 	border: 1px solid #dedede !important;
+    box-shadow: none !important;
+    background: rgba(255,255,255,0.98) !important;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move;
+	border: 0;
+	background: none;
+}
+
+.ui-dialog {
+	width: 200px !important;
+	z-index: 99999999 !important;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: center;
+	border: 0;
+	background-image: none;
+	margin-top: .5em;
+	padding: .3em 0 .5em 0;
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	margin: auto !important;
+	display: block !important;
+	width: 100%;
+	text-align: center;
+	padding: 0.3em 0;
+}
+
+.ui-widget-overlay {
+	z-index: 9999999 !important;
+}
+
+
+/* CUSTOM FOR TABLES */
+
+.auto_gen_table td {
+    border: 1px black solid;
+    width: 50px;
+    height: 50px;
+}
+
+/* SELECTED ITEM IN MANAGER */
+
+.selected {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.un_selected {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+#content div {
+	overflow: hidden;
+}
+
+#content div img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Progressbar uploading images */
+#progressbox {
+    border: 1px solid #0099CC;
+    padding: 1px; 
+    position:relative;
+    width:400px;
+    border-radius: 3px;
+    margin: 10px;
+    text-align:left;
+}
+#progressbar {
+    height:20px;
+    border-radius: 3px;
+    background-color: #003333;
+    width:1%;
+}
+#statustxt {
+    top:3px;
+    left:50%;
+    position:absolute;
+    display:inline-block;
+    color: #000000;
+}
+
+.MathJax_Preview {
+	display: none !important;
+}
+
+/* LODING GIF CSS */
+#loader {
+    display: none;
+    z-index: 999999999;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1,1,1,.4);
+}
+#loader_gif {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+/* SEARCH */
+.autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
+.autocomplete-suggestion { padding: 10px 5px; font-size: 1.2em; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #f0f0f0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399ff; }
+
+/* FORMULA MODAL */
+#frame_holder {
+	width: 100%;
+	position: relative;
+	text-align: left;
+}
+/*
+#frame_holder {
+    z-index:99999999;
+    position:fixed;
+    top:20%;
+    left:20%;
+    width:30%;
+    height:30%;
+    background-color:white;
+    display:none;
+    box-shadow: 0px 0px 10px #888888;
+    border-radius:10px;padding:5px;
+    overflow:hidden;
+}
+.hide_formula {
+    cursor:pointer;
+    overflow: hidden;
+    z-index:99999999;
+    position:fixed;
+}
+*/
+
+/* Image width and height fix */
+.img {
+    width: inherit;
+    height: inherit;
+}
+
+progress {
+	-webkit-appearance: none;
+	appearance:         none;
+	height:             2px;
+	width:              80%;
+	display: none;
+	margin: auto;
+}
+
+progress::-webkit-progress-bar {
+  background:          #f7f7f7;
+}
+
+progress::-webkit-progress-value {
+  background:         #2DB6CF;
+}
+
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #dedede;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 84%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 7px;
+	margin-left: -7px;
+}
+.arrow_box:before {
+	border-color: rgba(222, 222, 222, 0);
+	border-bottom-color: #dedede;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.arrow_box_left {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #dedede;
+}
+.arrow_box_left:after, .arrow_box_left:before {
+	bottom: 100%;
+	left: 16%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box_left:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 7px;
+	margin-left: -7px;
+}
+.arrow_box_left:before {
+	border-color: rgba(222, 222, 222, 0);
+	border-bottom-color: #dedede;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+/*@media (max-width: 1024px) {
+	nav#topBar .leftWrapper {
+		height: 54px;
+		overflow: hidden;
+		border-bottom: 1px solid #222222;
+		width: 61px;
+	}
+	#side-nav-wrapper {
+		position: relative;
+		float: left;
+		width: 61px;
+	}
+	aside#sideNav {
+		width: 61px;
+	}
+	.rightWrapper {
+		margin-left: 61px;
+	}
+	aside#sideNav #profile-info {
+		display: none;
+	}
+
+	aside#sideNav ul {
+		margin-top: 0px;
+	}
+
+	aside#sideNav ul li a {
+		padding: 0;
+		width: 61px;
+		height: 61px;
+	}
+	aside#sideNav ul li#small-screen-profile a {
+		display: block;
+    	margin-bottom: 105px;
+	}
+	aside#sideNav ul li a span {
+		display: none;
+	}
+}*/
+/*For modal*/
+ul.ui-autocomplete {
+    display:none;
+    z-index: 999999999;
+}
+
+/* Admin page */
+.tr-account-info {
+    border-top: 1px solid #ddd;
+}
+
+.tr-account-info:nth-child(odd) {
+    background-color: #ffffff;
+}
+.tr-account-info:nth-child(even) {
+    background-color: #f1f1f1;
+}
+

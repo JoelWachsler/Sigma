@@ -1,0 +1,9 @@
+localization/
+jax/
+*.min.js
+HTML-CSS/
+MathML
+TeX/
+config/
+extensions/
+zebra_datepicker.js
